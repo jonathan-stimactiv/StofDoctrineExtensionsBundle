@@ -11,7 +11,7 @@ use Stof\DoctrineExtensionsBundle\Uploadable\ValidatorConfigurator;
 return static function (ContainerConfigurator $container): void {
     $container->parameters()
         ->set('stof_doctrine_extensions.listener.uploadable.class', UploadableListener::class)
-        ->set('stof_doctrine_extensions.listener.uploadable.manager.class', UploadableManager::class)
+        ->set('stof_doctrine_extensions.uploadable.manager.class', UploadableManager::class)
         ->set('stof_doctrine_extensions.uploadable.mime_type_guesser.class', MimeTypeGuesserAdapter::class)
         ->set('stof_doctrine_extensions.uploadable.default_file_info.class', UploadedFileInfo::class)
     ;
