@@ -20,7 +20,7 @@ return static function (ContainerConfigurator $container): void {
             ->call('setTranslatableLocale', [param('stof_doctrine_extensions.default_locale')])
             ->call('setTranslationFallback', [param('stof_doctrine_extensions.translation_fallback')])
             ->call('setPersistDefaultLocaleTranslation', [param('stof_doctrine_extensions.persist_default_translation')])
-            ->call('setSkipOnLoad', [param('stof_doctrine_extensions.persist_default_translation')])
+            ->call('setSkipOnLoad', [param('stof_doctrine_extensions.skip_translation_on_load')])
 
         ->set('stof_doctrine_extensions.tool.locale_synchronizer', LocaleSynchronizer::class)
             ->args([
