@@ -36,7 +36,7 @@ return static function (ContainerConfigurator $container): void {
             ->call('setCacheItemPool', [service('stof_doctrine_extensions.metadata_cache')])
             ->call('setAnnotationReader', [service('.stof_doctrine_extensions.reader')->ignoreOnInvalid()])
             ->call('setDefaultFileInfoClass', [param('stof_doctrine_extensions.uploadable.default_file_info.class')])
-        ->alias(UploadableManager::class, 'stof_doctrine_extensions.uploadable_manager')
+        ->alias(UploadableManager::class, 'stof_doctrine_extensions.uploadable.manager')
 
         ->set('stof_doctrine_extensions.uploadable.configurator', ValidatorConfigurator::class)
             ->args([
